@@ -1,10 +1,13 @@
 #include <stdio.h>
 int main() {
     int arreglo[] = {2, 4, 6, 8, 10};
-    int tan = 5;
+    int *ptr;
 
-    for (int i = 0; i < tan; i++) {
-        printf("EL ARREGLO ES %d ", arreglo[i]);
+    ptr = &arreglo[0];
+    printf("%d" , *ptr);
+    for (int i = 0; i < 5; i++) {
+        printf("%d\t", arreglo[i]);
+        printf("%d ", *ptr);
     }
     return 0;
 }
